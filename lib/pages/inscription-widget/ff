@@ -1,0 +1,135 @@
+Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                        //color: Colors.white,
+                        border: Border.all(color: Colors.grey),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                      ),
+                      margin: const EdgeInsets.only(
+                          left: 20, right: 20, top: 0, bottom: 0),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Icon(
+                            Icons.edit,
+                            color: Colors.grey[600],
+                            size: 16,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              //controller: inscriptionBloc.nomC,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Code de Verification',
+                                hintStyle: TextStyle(
+                                    color: Colors.grey[600], fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 0),
+                 
+                ],
+              ),
+              SizedBox(height: 50),
+            
+              
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          //color: Colors.white,
+                          // border:  Border.all(color: Colors.grey),
+                          // borderRadius: const BorderRadius.all(Radius.circular(10)),
+                          ),
+                      //height: 45,
+                      margin: const EdgeInsets.only(
+                          left: 20, right: 0, top: 0, bottom: 0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              //color: Colors.white,
+                              height: 65,
+                              margin: const EdgeInsets.only(
+                                  left: 0, right: 0, top: 0, bottom: 0),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 0, right: 0, top: 0, bottom: 20),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    foregroundColor: Colors.white,
+                                    backgroundColor: const Color(0xFF228feb),
+                                    shape: const ContinuousRectangleBorder(
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(
+                                              10)), // Rayon des coins personnalisés
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    connexionBloc.setPage(1);
+                                    // Action à réaliser lors de la soumission
+                                    // print('Formulaire soumis');
+                                  },
+                                  child: const Text('Precedent'),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                            child: Container(
+                              //color: Colors.white,
+                              height: 65,
+                              margin: const EdgeInsets.only(
+                                  left: 0, right: 20, top: 0, bottom: 0),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 0, right: 0, top: 0, bottom: 20),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    foregroundColor: Colors.white,
+                                    backgroundColor: const Color(0xFF228feb),
+                                    shape: const ContinuousRectangleBorder(
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(
+                                              10)), // Rayon des coins personnalisés
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                   // inscriptionBloc.setPage(2);
+                                    // Action à réaliser lors de la soumission
+                                    // print('Formulaire soumis');
+                                    
+                                  },
+                                  child: const Text('Enoyer'),
+                                ),
+                              ),
+                            ),
+                          ),
+                          
+                ],
+              ),
+            ],
+          
+          ),
+        
